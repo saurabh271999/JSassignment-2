@@ -154,10 +154,13 @@ if(x > y && x < z || x < y && x > z){
 // Sample Output
 // obtuse
 
-let height = 10
-let breadth = 10
-let hypotense = 20
+var A = 60, B = 100, C = 20;
 
-if(height == breadth){
-    console.log('its right angle triangle')
+// A valid triangle must have a sum of 180 degrees
+if (A + B + C !== 180 || A <= 0 || B <= 0 || C <= 0) {
+    console.log("invalid");
+} else if (A > 90 || B > 90 || C > 90) {
+    console.log("obtuse");
+} else {
+    console.log("acute");
 }
